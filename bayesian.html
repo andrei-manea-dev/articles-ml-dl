@@ -13600,6 +13600,7 @@ The next step is to encode the month column using a LabelEncoder from <a href="h
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>The following search methods require <a href="https://machinelearningmastery.com/k-fold-cross-validation/">K-Fold Cross Validation</a>. However, the regular one does not fit on time series subjects, because that means predicting the past behaviour based on future events, and this may interfere with the pattern that our model tries to understand. So, we'll use a <a href="https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.TimeSeriesSplit.html">TimeSeriesSplit</a> which folds the dataset only from right to left (future through past).</p>
+<p><img src="https://user-images.githubusercontent.com/53035061/92261798-c4344180-eee2-11ea-8f1d-5ff6cd7e5996.png" width="35%"></p>
 
 </div>
 </div>
@@ -13623,7 +13624,7 @@ The next step is to encode the month column using a LabelEncoder from <a href="h
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Grid-Search">Grid Search<a class="anchor-link" href="#Grid-Search">&#182;</a></h1><p>One of the most popular approach is to list all the hyperparameter possible values in a multidimensional grid and to run the training process for each point. In the bellow figure, we have 2 parameters, one with a great impact and one with a lesser. The colored graph represents the score of the trained model. <br />
 As you may see on the red graph, the grey points are the values we get; but there are a lot of higher points between them that we ignore. A naive solution would be to set more points for all parameteres. But acording to the exponential complexity, this will lead to the <a href="https://www.kaggle.com/residentmario/curse-of-dimensionality">Curse of Dimensionality</a>.</p>
-<p><img src="grid_search.jpg" width="35%"></p>
+<p><img src="https://user-images.githubusercontent.com/53035061/92261689-8f27ef00-eee2-11ea-8d02-82971915174e.jpg" width="35%"></p>
 <p>Bellow, we set the search space: it consist of list of fixed values.</p>
 
 </div>
@@ -13776,7 +13777,7 @@ As you may see on the red graph, the grey points are the values we get; but ther
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Randomized-Search">Randomized Search<a class="anchor-link" href="#Randomized-Search">&#182;</a></h1><p>Instead of having a list of possible value, this time we'll use a probability distribution (usually uniform). On every step, a random variable is generated for each hyperparameter. This is much faster and the process has no end, therefore a new parameter should be specified (n_iter). <br /></p>
 <p>In the bellow figure, we have 2 parameters of opposite importance and a scenario where the local maxima is archived. But there are multiple scenarios where it is hardly found, because, for example, if we have uniform distribution, each real point is an equal candidate to be the next one. So the local minima/maxima can be found either in 2 steps, either in 2000, depending how luck you are, right? :)</p>
-<p><img src="random_search.jpg" width="35%"></p>
+<p><img src="https://user-images.githubusercontent.com/53035061/92261774-ba124300-eee2-11ea-921c-e38220e6d1e0.jpg" width="35%"></p>
 
 </div>
 </div>
@@ -13987,6 +13988,8 @@ As you may see on the red graph, the grey points are the values we get; but ther
 <div class="output_area">
 
     <div class="prompt"></div>
+    
+</div>
 
 <div class="output_area">
 
@@ -14090,40 +14093,6 @@ Also if you are having trouble in understanding the meaning of each hyperparamet
 </pre></div>
 
     </div>
-</div>
-</div>
-
-</div>
-
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-
-<div class="output_html rendered_html output_subarea ">
-<script>jQuery(function() {if (jQuery("body.notebook_app").length == 0) { jQuery(".input_area, .output_stderr").toggle(); jQuery(".prompt").toggle();}});</script>
-</div>
-
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-
-<div class="output_html rendered_html output_subarea ">
-<button onclick="jQuery('.input_area').toggle(); jQuery('.prompt').toggle();">Click in rendered .html output only, toggles the code</button>
-</div>
-
-</div>
-
 </div>
 </div>
 
